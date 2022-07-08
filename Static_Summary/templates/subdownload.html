@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css'>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+        .dwld-url{
+            margin-top : 10%;
+        }
+        .foot{
+            position:absolute;
+            bottom:0;
+            width:100%;
+            height:100px;
+        }
+        .dwldButton{
+          margin-top : 10px;
+        }
+    </style>
+    <title>Download page </title>
+</head>
+
+<body>
+    <!-- Navbar start  -->
+    <section class="nav hero is-dark" >
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title">
+                  Video summarizer
+                </h1>
+                <h2 class="subtitle">
+                  Summarize your video to any length.
+                </h2>
+              </div>
+            </div>
+    </section>
+    <!-- Navbar end -->
+
+    <div class="dwld-url">
+    <center>
+      {% ifequal best "none" %}
+      {% else %}
+      <h2> {{best}} have more contribution in the summarized video and {{worst}} have the least contribution amomg all </h2>
+      {% endifequal %}
+    <h1> Click to download the summarized video </h1>
+    <div class="dwldButton">
+    <a href=".{{downloadURL}}" class="button is-success is-rounded is-large is-focused" download="kfs_before.zip" target="_blank">
+    Download 
+    </a>
+    </div>
+    </center>
+    </div>
+
+    <div class="foot">
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <!-- <strong>Video Summarizer </strong> by <a href="https://jgthms.com">Aswanth ,Druval, Aswin, Anupam and Parag</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. -->
+          </p>
+        </div>
+    </footer>
+    <div>
+</body>
+</html>

@@ -1,0 +1,332 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Video_Summarizer</title>
+
+    <script
+      src="https://kit.fontawesome.com/036ef5e281.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    
+    <style>
+      #title{
+    /* background-color: #ff4c68; */
+    background-color: #5E63B6;
+    color: #fff;
+}
+body{
+    font-family: "Montserrat";
+}
+h1{
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+h2{
+    font-family: "Montserrat";
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+h3{
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
+p{
+    color: #8f8f8f;
+}
+.container-fluid{
+    padding: 3% 15% 7%;
+}
+
+.navbar{
+    padding: 0 0 4.5rem;
+}
+
+.nav-item{
+    padding: 0 18px;
+}
+
+.navbar-brand{
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+    font-family: "Montserrat";
+    font-weight:400;
+}
+
+/* Download Button */
+.download-button{
+    margin: 5% 3% 5% 0;
+}
+
+/* Title Image */
+.title-image{
+    width: 60%;
+    transform: rotate(25deg);
+    position: absolute;
+    z-index: 1;
+}
+
+#features{
+    padding: 7% 15%;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-box{
+    text-align: center;
+    padding: 5%;
+}
+
+.icon{
+    color: #A393EB;
+    margin-bottom: 1rem;
+}
+
+.icon:hover{
+    color: #5E63B6;
+}
+
+#testimonials{
+    
+    text-align: center;
+    background-color:#ef8172;
+    color: #fff;
+}
+
+.testimonial-image{
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+#press{
+    background-color: #ef8172;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.press-logo{
+    width: 15%;
+    margin: 20px 20px 50px;
+}
+
+.carousel-item{
+    padding: 7% 14%;
+}
+
+#pricing{
+    padding: 100px;
+    text-align: center;
+}
+
+.pricing-column{
+    padding: 3% 2%;
+}
+
+@media (max-width: 1028px){
+    #title{
+        text-align: center;
+    }
+
+    .title-image{
+        position: static;
+        transform: rotate(0);
+    }
+}
+
+#cta{
+    background-color: #5E63B6;
+    color: #fff;
+    text-align: center;
+    padding: 7% 14%;
+}
+
+.cta-heading{
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+#footer{
+    padding: 7% 15%;
+    text-align: center;
+}
+.social-icon{
+    margin: 20px 10px;
+}
+
+.material-icons.md-dark{
+      color: rgba(0, 0, 0, 0.54); 
+      font-size: 40px;
+}
+
+.subscript{
+    color:white;
+    text-align: center;
+
+}
+    </style>
+  </head>
+
+  <body>
+    <section id="title">
+      <div class="container-fluid">
+        <!-- Nav Bar -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+           <a class="navbar-brand" href="#title"> <i class="fab fa-google-play"></i>
+          </i> Video Summariser </a> 
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href=""> Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#features"> Info </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#footer"> Contact Us </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cta"> Summarizer </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Title -->
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <h1>Process of Summarizing videos made Simple.</h1>
+
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <video width="520" height="340" autoplay>
+                <source src="{% static 'TED.mp4' %}" type=video/mp4>
+              </video>
+              <p class="subscript"> Summarized video of a TED talk by Siddharthan Chandran.</p>
+        
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+
+    <section id="features">
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-check-circle fa-4x"></i>
+          <h3>Easy to use.</h3>
+          <p>Summarize video with minimal effort</p>
+        </div>
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-heart fa-4x"></i>
+          <h3>Trust Worthy.</h3>
+          <p>Works on major formats, such as MKV and MP4.</p>
+        </div>
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-clock fa-4x"></i>
+          <h3>Save Time.</h3>
+          <p>Video Review time reduced from hours to minutes.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="cta">
+      <h3 class="cta-heading"> Summarize Video either as Static Keyframes or a Dynamic Video.</h3>
+            <button onclick="myFunction()"
+              type="button"
+              class="btn btn-outline-light btn-lg download-button col-lg-4"
+            >
+              <i class="fab fa-google-play"></i> Dynamic Summarisation
+            </button>
+            <button onclick="myFunction1()"
+            type="button"
+            class="btn btn-outline-light btn-lg download-button col-lg-4"
+          >
+            <i class="fab fa-google-play"></i> Static Summarisation
+          </button>
+    </section>
+
+    <script>
+      function myFunction() {
+        location.assign("/main")
+      }
+    </script>
+        <script>
+          function myFunction1() {
+            location.assign("/Static_Summary")
+          }
+        </script>
+
+    <!-- Footer -->
+
+    <footer id="footer">
+      <i class="social-icon fab fa-facebook"></i>
+      <i class="social-icon fab fa-twitter-square"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon far fa-envelope"></i>
+      <p>© Copyright 2021 Video_Summariser</p>
+    </footer>
+  </body>
+</html>
